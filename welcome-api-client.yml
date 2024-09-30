@@ -1,21 +1,30 @@
+#server:
+# port: 1111 
+
+
 spring:
   application:
-    name: Welcome-API-Client-2
+    name: welcome-api-client
 
-#admin server url --this will register our hello api /welcom2 api with admin server as a client
-
+ 
+ #admin server url
   boot:
     admin:
       client:
         url: http://localhost:4444/
-
-server:
- port: 2222
- 
- #enable the actuator endpoint
+    
+#enable the actuator endpoint
 
 management:
   endpoints:
-   web:
-    exposure:
-     include: '*'
+    web:
+      exposure:
+        include: '*'
+
+#eureka:
+# client:
+#  serviceUrl:
+#   defaultZone: http://localhost:8761/eureka
+
+
+
